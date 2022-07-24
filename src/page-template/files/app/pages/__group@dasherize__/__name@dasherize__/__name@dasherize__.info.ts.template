@@ -1,0 +1,8 @@
+// TODO demo api requestInfo case
+export interface QueryCalendarInfo {
+  factory: string;
+  process: string;
+  line: string;
+  startDate: string;
+  endDate: string;
+}

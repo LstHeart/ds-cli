@@ -1,0 +1,18 @@
+import { Injectable } from '@angular/core';
+import { ApiRequestConfig } from '@core/axios-service/axios.info';
+import { AxiosService } from '@core/axios-service/axios.service';
+import { PortalService } from '@core/portal-service/portal.service';
+
+export enum ProgCode {
+  // TODO demo Api ProgCode
+  queryCalendar = 'Prog582',
+}
+
+@Injectable()
+export class <%= classify(name) %>ApiService {
+  constructor(private axiosService: AxiosService, private portalService: PortalService) {}
+
+  // TODO demo api
+  queryCalendar = async <T>(requestData: T, requestConfig?: ApiRequestConfig) =>
+    await this.axiosService.callApi(ProgCode.queryCalendar, requestData, requestConfig);
+}

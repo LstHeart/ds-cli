@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { FoundationSvc } from '@core/portal-service/portal.info';
+import { PortalService } from '@core/portal-service/portal.service';
+import { <%= classify(name) %>Component } from './sample-page.component';
+import { <%= classify(name) %>ApiService } from '@api/<%= dasherize(group) %>/<%= dasherize(name) %>/<%= dasherize(name) %>-api.service';
+
+@Injectable()
+export class <%= classify(name) %>Service {
+  compInstance: <%= classify(name) %>Component;
+  foundationSvc: FoundationSvc;
+
+  constructor(private portalService: PortalService, private <%= camelize(name) %>ApiService: <%= classify(name) %>ApiService) {
+    this.foundationSvc = this.portalService.foundationSvc;
+  }
+
+  setCompInstance(compInstance: <%= classify(name) %>Component) {
+    this.compInstance = compInstance;
+  }
+
+  // TODO mock request demo
+  async queryCalendar<T>(requestData: T) {
+    return await this.<%= camelize(name) %>Api.queryCalendar(requestData, { callMock: true });
+  }
+
+}

@@ -1,0 +1,13 @@
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from '@shared/shared.module';
+import { <%= classify(name) %>Component } from './<%= dasherize(name) %>.component';
+import { <%= classify(name) %>Service } from './<%= dasherize(name) %>.service';
+import { <%= classify(name) %>ApiService } from '@api/<%= dasherize(group) %>/<%= dasherize(name) %>/<%= dasherize(name) %>-api.service';
+
+@NgModule({
+  declarations: [<%= classify(name) %>Component],
+  imports: [SharedModule, RouterModule.forChild([{ path: '', component: <%= classify(name) %>Component }])],
+  providers: [<%= classify(name) %>Service, <%= classify(name) %>ApiService],
+})
+export class <%= classify(name) %>Module {}

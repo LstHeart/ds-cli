@@ -1,0 +1,25 @@
+import { ProgCode } from '@api/<%= dasherize(group) %>/<%= dasherize(name) %>/<%= dasherize(name) %>-api.service';
+import { callApiByMock, getUrlByProgCode } from '@shared/utils';
+import { rest } from 'msw';
+
+// TODO demo case Begin
+const { url: queryCalendarUrl, baseUrl, reqPath } = getUrlByProgCode(ProgCode.queryCalendar);
+
+const queryCalendarHandler = [
+  rest.post(queryCalendarUrl, (req, res, ctx) => {
+    if (!callApiByMock(req)) {
+      req.passthrough();
+      return;
+    }
+    const responseData = {
+      result: '0000000',
+      message: 'Mock Success Response',
+      responseObject: [],
+    };
+    return res(ctx.status(200), ctx.json(responseData));
+  }),
+];
+
+// TODO demo case End
+
+export const <%= classify(name) %>Handlers = [...queryCalendarHandler];

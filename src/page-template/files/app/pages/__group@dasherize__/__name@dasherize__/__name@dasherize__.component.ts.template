@@ -1,0 +1,35 @@
+import { Component, OnInit } from '@angular/core';
+import { <%= classify(name) %>Service } from './<%= dasherize(name) %>.service';
+import { QueryCalendarInfo } from './<%= dasherize(name) %>.info';
+
+@Component({
+  selector: 'app-<%= dasherize(name) %>',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.css'],
+})
+export class <%= classify(name) %>Component implements OnInit {
+
+  constructor(
+    private <%= camelize(name) %>Service: <%= classify(name) %>Service,
+  ) {}
+
+  ngOnInit(): void {}
+
+  // TODO api demo
+  async queryCalendar() {
+    const requestData: QueryCalendarInfo = {
+      factory: 'WZS-3A',
+      process: 'FA',
+      line: 'FA1,FA2,FA3',
+      startDate: '2021-05-31',
+      endDate: '2022-06-14',
+    };
+
+    // debugger;
+    const result = await this.<%= camelize(name) %>Service.queryCalendar(requestData);
+
+    if (!result) return;
+
+    console.log('result:', result);
+  }
+}
