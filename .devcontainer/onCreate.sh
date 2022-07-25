@@ -12,4 +12,4 @@ fisher install jorgebucaran/autopair.fish
 fisher install PatrickF1/fzf.fish
 fisher install jorgebucaran/nvm.fish
 fisher install IlanCosman/tide@v5
-npm install -g @antfu/ni @angular/cli@13 @angular-devkit/schematics-cli pnpm yarn vsce yo
+# npm install -g @antfu/ni @angular/cli@13 @angular-devkit/schematics-cli pnpm yarn vsce yo
