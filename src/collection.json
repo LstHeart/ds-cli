@@ -5,13 +5,9 @@
       "description": "A blank schematic.",
       "factory": "./hello-world/index#helloWorld"
     },
-    "goodbye-world": {
-      "description": "A blank schematic.",
-      "factory": "./goodbye-world/index#goodbyeWorld"
-    },
     "page-template": {
-      "description": "创建一个页面组件的通用模板，包含page、api、mock设定",
-      "factory": "./page-component/index#genPage"
+      "description": "创建一个页面组件的通用模板,包含page、api、mock设定",
+      "factory": "./page-template/index#genPage"
     }
   }
 }

@@ -5,7 +5,7 @@ import {
   chain, template, branchAndMerge,
 } from '@angular-devkit/schematics';
 import { normalize, strings, virtualFs, workspaces } from '@angular-devkit/core';
-import { PageComponentSchema as Schema } from './schema'
+import { Schema as PageComponentSchema } from './schema'
 import { parseName } from '@schematics/angular/utility/parse-name';
 import { buildDefaultPath, getWorkspace } from '@schematics/angular/utility/workspace';
 
@@ -60,7 +60,7 @@ function createHost(tree: Tree): workspaces.WorkspaceHost {
   };
 }
 
-export function genPage(_options: Schema): Rule {
+export function genPage(_options: PageComponentSchema): Rule {
 
   return async (tree: Tree, _context: SchematicContext) => {
     // 创建虚拟目录

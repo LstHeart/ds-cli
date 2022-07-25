@@ -3,7 +3,7 @@
   "id": "pageTemplateSchema",
   "title": "page template options schema.",
   "type": "object",
-  "descripiton": "create a new page template",
+  "description": "create a new page template",
   "properties": {
       "name": {
           "description": "page name",

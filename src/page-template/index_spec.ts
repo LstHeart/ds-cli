@@ -6,11 +6,11 @@ import { strings } from '@angular-devkit/core';
 import * as path from 'path';
 import { Tree } from '@angular-devkit/schematics';
 import { createDefaultPath } from '@schematics/angular/utility/workspace';
-import { PageComponentSchema } from './schema';
+import { Schema as PageComponentSchema } from './schema'
 
 const collectionPath = path.join(__dirname, '../collection.json');
 
-describe('page-component', () => {
+describe('page-template', () => {
 
 
   // 选项 --name的值
@@ -37,7 +37,7 @@ describe('page-component', () => {
 
   const schemaArgs: PageComponentSchema = {
     name: 'demo-page',
-    project: 'page-component',
+    project: 'page-template',
     group: 'demo'
   }
 
@@ -61,7 +61,7 @@ describe('page-component', () => {
   it('works', async () => {
 
     // runSchematicAsync()参数：schema名称、参数、Tree
-    const tree = await runner.runSchematicAsync('page-component', schemaArgs, testTree).toPromise();
+    const tree = await runner.runSchematicAsync('page-template', schemaArgs, testTree).toPromise();
 
     console.log('tree:', testTree.files);
     const { name, group } = schemaArgs;
