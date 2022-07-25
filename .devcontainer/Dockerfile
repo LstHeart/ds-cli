@@ -11,4 +11,4 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 # RUN su node -c "source /usr/local/share/nvm/nvm.sh"
 
 # [Optional] Uncomment if you want to install more global node packages
-# RUN su node -c "npm install -g @antfu/ni @angular/cli@13 @angular-devkit/schematics-cli pnpm yarn vsce yo"
+# RUN su node -c "npm install -g @antfu/ni @angular/cli @angular-devkit/schematics-cli pnpm yarn vsce yo"

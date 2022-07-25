@@ -17,10 +17,21 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"eamodio.gitlens",
+				"ms-vsliveshare.vsliveshare",
+				"visualstudioexptteam.vscodeintellicode",
+				"angular.ng-template",
+				"johnpapa.angular2",
+				"dbaeumer.vscode-eslint",
+				"cyrilletuzi.angular-schematics",
+				"redhat.vscode-yaml"
 			],
 			"settings": {
-				"terminal.integrated.defaultProfile.linux": "fish"
+				"terminal.integrated.defaultProfile.linux": "fish",
+				"extensions.ignoreRecommendations": true,
+				"gitlens.showWelcomeOnInstall": false,
+				"gitlens.showWhatsNewAfterUpgrades": false
 			}
 		}
 	},
