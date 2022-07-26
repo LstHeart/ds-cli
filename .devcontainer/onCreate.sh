@@ -1,6 +1,13 @@
 #!/bin/bash
-sudo apt-get update -y
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# install homebrew
+sudo apt-get update -y && \
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+# install fish by homebrew
+brew install fish
+# install fzf
+brew install fzf &&
 # ~/.fzf/install
 # install an additional version of node using nvm
 
