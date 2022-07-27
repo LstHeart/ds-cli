@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# install fish & fisher
-brew install fish fisher
-
 # fisher tools
+if [ ! -d ~/.config/fish/conf.d ]; then
+  mkdir -p ~/.config/fish/conf.d
+fi
 curl https://raw.githubusercontent.com/skywind3000/z.lua/master/z.lua > ~/.config/fish/conf.d/z.lua \
 && echo "lua ~/.config/fish/conf.d/z.lua --init fish | source" > ~/.config/fish/conf.d/z.fish
 
