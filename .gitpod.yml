@@ -9,7 +9,7 @@ tasks:
     init: |
       echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start init script...'
       echo 'current-dir:' `pwd`
-      sh .devcontainer/scripts/tools/setup_nodejs.sh && sh .devcontainer/scripts/tools/setup_fish.sh
+      sh .devcontainer/scripts/tools/setup_nodejs.sh && fish .devcontainer/scripts/tools/setup_fish.fish
       # switch nodejs & install global npms
       sh .devcontainer/scripts/custom/setup_npm.sh
       echo 'TODO: build app'
