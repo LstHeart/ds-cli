@@ -13,7 +13,7 @@ tasks:
       # switch nodejs & install global npms
       sh .devcontainer/scripts/custom/setup_npm.sh
       echo 'TODO: build app'
-      [ -s ./package.json] ni
+      [ -s ./package.json ] ni
     command: |
       echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start command script...'
       echo 'current-dir:' `pwd`

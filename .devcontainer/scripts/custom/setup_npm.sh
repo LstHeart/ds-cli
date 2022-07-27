@@ -3,8 +3,10 @@
 # switch nodejs && set default nodejs
 nvm use 14 && nvm default 14
 
+
 # custom global npm
-npm install -g @devcontainers/cli pnpm yarn
+# devcontainers cli
+npm install -g @devcontainers/cli
 
 # vscode extension
 npm install -g vsce yo

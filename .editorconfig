@@ -14,3 +14,9 @@ quote_type = single
 [*.md]
 insert_final_newline = false
 trim_trailing_whitespace = true
+
+[*.{sh,fish,yml,Dockerfile}]
+end_of_line = lf
+insert_final_newline = false
+indent_size = 2
+trim_trailing_whitespace = true

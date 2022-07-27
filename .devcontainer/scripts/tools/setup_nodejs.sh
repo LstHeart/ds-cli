@@ -6,3 +6,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 nvm install 14 && nvm install 16
+
+# npm package manager
+brew install yarn pnpm
