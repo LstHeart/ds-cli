@@ -17,5 +17,5 @@ tasks:
     command: |
       echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start command script...'
       echo 'current-dir:' `pwd`
-      cat ~/.dotfiles.log > .dotfiles.log
+      [ -f ~/.dotfiles.log ] && cat ~/.dotfiles.log > .dotfiles.log
       echo 'TODO: start app'
