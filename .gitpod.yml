@@ -1,0 +1,21 @@
+image:
+  file: .gitpod.Dockerfile
+# init scripts will be skipped when open worksapce with prebuild
+tasks:
+  - before: |
+      echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start before script...'
+      echo 'current-dir:' `pwd`
+      sudo chmod -R 755 .devcontainer/
+    init: |
+      echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start init script...'
+      echo 'current-dir:' `pwd`
+      sh .devcontainer/scripts/tools/setup_nodejs.sh && sh .devcontainer/scripts/tools/setup_fish.sh
+      # switch nodejs & install global npms
+      sh .devcontainer/scripts/custom/setup_npm.sh
+      echo 'TODO: build app'
+      [ -s ./package.json] ni
+    command: |
+      echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start command script...'
+      echo 'current-dir:' `pwd`
+      cat ~/.dotfiles.log > .dotfiles.log
+      echo 'TODO: start app'
