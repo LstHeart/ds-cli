@@ -55,3 +55,4 @@ src/page-template/*.js
 src/page-template/*.map
 src/page-template/*.d.ts
 !src/page-template/schema.d.ts
+.dotfiles.log
