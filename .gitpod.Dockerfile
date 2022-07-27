@@ -15,4 +15,7 @@ RUN sudo apt remove -y cmake \
     && brew install cmake
 
 # Install custom tools, runtime, etc.
-RUN brew install fzf ranger fish fisher
+RUN brew install \
+      fzf  ranger \
+      fish fisher \
+      lua luarocks

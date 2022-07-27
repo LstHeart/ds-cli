@@ -1,7 +1,8 @@
 # fisher tools
-if [ ! -d ~/.config/fish/conf.d ]; then
+if ! test -d ~/.config/fish/conf.d
   mkdir -p ~/.config/fish/conf.d
-fi
+end
+
 curl https://raw.githubusercontent.com/skywind3000/z.lua/master/z.lua > ~/.config/fish/conf.d/z.lua \
 && echo "lua ~/.config/fish/conf.d/z.lua --init fish | source" > ~/.config/fish/conf.d/z.fish
 
