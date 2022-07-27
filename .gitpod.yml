@@ -9,13 +9,13 @@ tasks:
     init: |
       echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start init script...'
       echo 'current-dir:' `pwd`
-      sh .devcontainer/scripts/tools/setup_nodejs.sh && fish .devcontainer/scripts/tools/setup_fish.fish
-      # switch nodejs & install global npms
-      sh .devcontainer/scripts/custom/setup_npm.sh
-      echo 'TODO: build app'
-      [ -s "package.json" ] && ni
+      # sh .devcontainer/scripts/tools/setup_nodejs.sh && fish .devcontainer/scripts/tools/setup_fish.fish
+      # # switch nodejs & install global npms
+      # sh .devcontainer/scripts/custom/setup_npm.sh
+      # echo 'TODO: build app'
+      # [ -s "package.json" ] && ni
     command: |
       echo `date +"[%Y/%m/%d %H:%M:%S]"` 'start command script...'
       echo 'current-dir:' `pwd`
-      [ -f ~/.dotfiles.log ] && cat ~/.dotfiles.log > .dotfiles.log
-      echo 'TODO: start app'
+      # [ -f ~/.dotfiles.log ] && cat ~/.dotfiles.log > .dotfiles.log
+      # echo 'TODO: start app'
