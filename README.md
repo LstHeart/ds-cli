@@ -1,3 +1,4 @@
+[![OSCS Status](https://www.oscs1024.com/platform/badge/LstHeart/ds-cli.svg?size=small)](https://www.oscs1024.com/project/LstHeart/ds-cli?ref=badge_small)
 # Getting Started With Schematics
 
 This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
