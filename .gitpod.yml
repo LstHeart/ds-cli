@@ -1,5 +1,5 @@
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-base:latest
+  # file: .gitpod.Dockerfile
 # init scripts will be skipped when open worksapce with prebuild
 tasks:
   - before: |
