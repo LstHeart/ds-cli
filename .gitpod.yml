@@ -1,9 +1,14 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: | # runs during prebuild
+  - before: |
+      echo 'before script'
+      sleep 20
+    init: | # runs during prebuild
       echo 'init script'
+      sleep 30
     command: | # runs everytime when start
       echo 'start script'
+      sleep 20
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 # ports:
