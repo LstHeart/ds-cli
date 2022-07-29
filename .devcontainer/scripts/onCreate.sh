@@ -4,23 +4,26 @@
 echo `date +"[%Y/%m/%d %H:%M:%S]"` 'onCreateCommand will begin✨' \
   && echo '[working-dir]:' `pwd`
 
-# setup nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-nvm install 14 && nvm install 16 \
-  && nvm default 14
 # install global npms
-npm install -g @devcontainers/cli @antfu/ni pnpm yarn vsce yo
+npm install -g @devcontainers/cli @antfu/ni vsce yo
 
-## install fzf
-brew install fzf && echo y y y| $(brew --prefix)/opt/fzf/install
+## setup fish
+if [ ! -d ~/.config/fish/conf.d ]; then
+  mkdir -p ~/.config/fish/conf.d
+fi
+curl https://raw.githubusercontent.com/skywind3000/z.lua/master/z.lua > ~/.config/fish/conf.d/z.lua \
+&& echo "lua ~/.config/fish/conf.d/z.lua --init fish | source" > ~/.config/fish/conf.d/z.fish
 
-# install other softs by homebrew
-brew install fisher \
-    lua luarocks \
-    gh git-lfs \
-    ranger
+fish -c "fisher install jorgebucaran/nvm.fish"
+fish -c "fisher install PatrickF1/fzf.fish"
+fish -c "fisher install franciscolourenco/done "
+fish -c "fisher install jorgebucaran/autopair.fish"
+fish -c "fisher install andreiborisov/sponge"
+fish -c "echo y | fisher install ilancosman/tide@v5"
+
+# git-completion
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
+  -O $HOME/.git-completion.bash
 
 echo `date +"[%Y/%m/%d %H:%M:%S]"` 'onCreateCommand has done🎉'
 exit
