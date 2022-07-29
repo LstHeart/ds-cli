@@ -1,17 +1,9 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.238.1/containers/ubuntu
 {
-  "name": "Ubuntu",
-  "build": {
-    "dockerfile": ".codespaces.Dockerfile",
-    // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
-    // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-    "args": {
-      "VARIANT": "ubuntu-22.04"
-    }
-  },
-  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "vscode",
+  "name": "DS_CLI",
+// # 自定义镜像已包含
+// #  softs: homebrew 、fish 、fisher、fzf、ranger、lua、luarocks、gh、git-lfs、nvm、pnpm、yarn
+// #  NodeJS: 14.20.0(default)、16.16.0
+  "image": "lstheart/codespace:latest",
   // life scripts
   "initializeCommand": "sudo chmod -R 755 .devcontainer/scripts/ && mkdir -p .devcontainer/logs",
   "onCreateCommand": ".devcontainer/scripts/onCreate.sh > .devcontainer/logs/onCreate.log",
