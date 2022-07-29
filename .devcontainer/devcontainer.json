@@ -5,11 +5,11 @@
 // #  NodeJS: 14.20.0(default)、16.16.0
   "image": "lstheart/codespace:latest",
   // life scripts
-  "initializeCommand": "sudo chmod -R 755 .devcontainer/scripts/ && mkdir -p .devcontainer/logs",
-  "onCreateCommand": ".devcontainer/scripts/onCreate.sh > .devcontainer/logs/onCreate.log",
-  "updateContentCommand": ".devcontainer/scripts/updateContent.sh > .devcontainer/logs/updateContent.log",
-  "postCreateCommand": ".devcontainer/scripts/postCreate.sh > .devcontainer/logs/postCreate.log",
-  "postStartCommand": ".devcontainer/scripts/postStart.sh > .devcontainer/logs/postStart.log",
+  "initializeCommand": "sudo chmod -R 755 .devcontainer/scripts/",
+  "onCreateCommand": ".devcontainer/scripts/onCreate.sh",
+  "updateContentCommand": ".devcontainer/scripts/updateContent.sh",
+  "postCreateCommand": ".devcontainer/scripts/postCreate.sh",
+  "postStartCommand": ".devcontainer/scripts/postStart.sh",
   "features": {
     // "docker-in-docker": "latest"
   },

@@ -13,7 +13,7 @@ DofilesLog='/workspaces/.codespaces/.persistedshare/dotfiles/dotfiles.log'
 ## update project dependencies and so on
 # echo 'update dependencies' && ni
 # nr serve
-nr build
+ni
 ## ...
 
 echo `date +"[%Y/%m/%d %H:%M:%S]"` 'postStartCommand has done🎉'
