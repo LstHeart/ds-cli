@@ -6,8 +6,8 @@
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -p tsconfig.json --watch",
     "test": "npm run build && jasmine src/page-template/**/*_spec.js",
-    "new:test":"ng new test",
-    "schema:test":"schematics .:page-template --debug=false"
+    "new:test": "ng new test",
+    "schema:test": "schematics .:page-template --debug=false"
   },
   "keywords": [
     "schematics"
