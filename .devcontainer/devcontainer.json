@@ -24,9 +24,6 @@
         // "eamodio.gitlens",
         // "ms-vsliveshare.vsliveshare",
         // "visualstudioexptteam.vscodeintellicode",
-        // "angular.ng-template",
-        // "johnpapa.angular2",
-        // "cyrilletuzi.angular-schematics",
         // "redhat.vscode-yaml",
         "dbaeumer.vscode-eslint"
       ],
@@ -35,6 +32,15 @@
         "extensions.ignoreRecommendations": true,
         "gitlens.showWelcomeOnInstall": false,
         "gitlens.showWhatsNewAfterUpgrades": false
+      }
+    },
+    "codespaces":{
+      "repositories": {
+        "LstHeart/chezmoi-dotfiles":{
+          "permissions": {
+            "contents ": "write"
+          }
+        }
       }
     }
   }
