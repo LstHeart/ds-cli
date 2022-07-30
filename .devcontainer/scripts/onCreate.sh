@@ -16,7 +16,7 @@ curl https://raw.githubusercontent.com/skywind3000/z.lua/master/z.lua > ~/.confi
 
 fish -c "fisher install jorgebucaran/nvm.fish"
 fish -c "fisher install PatrickF1/fzf.fish"
-fish -c "fisher install franciscolourenco/done "
+fish -c "fisher install franciscolourenco/done"
 fish -c "fisher install jorgebucaran/autopair.fish"
 fish -c "fisher install andreiborisov/sponge"
 fish -c "echo y | fisher install ilancosman/tide@v5"
@@ -24,6 +24,10 @@ fish -c "echo y | fisher install ilancosman/tide@v5"
 # git-completion
 wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash \
   -O $HOME/.git-completion.bash
+
+# config chezmoi
+chezmoi init $CHEZMOI_DOTFILES
+chezmoi completion fish > ~/.config/fish/completions/chezmoi.fish
 
 echo `date +"[%Y/%m/%d %H:%M:%S]"` 'onCreateCommand has done🎉'
 exit

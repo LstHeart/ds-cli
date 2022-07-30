@@ -15,16 +15,9 @@
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
-  // Configure tool-specific properties.
   "customizations": {
-    // Configure properties specific to VS Code.
     "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        // "eamodio.gitlens",
-        // "ms-vsliveshare.vsliveshare",
-        // "visualstudioexptteam.vscodeintellicode",
-        // "redhat.vscode-yaml",
         "dbaeumer.vscode-eslint"
       ],
       "settings": {
