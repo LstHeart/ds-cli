@@ -5,7 +5,7 @@
 // #  NodeJS: 14.20.0(default)、16.16.0
   "image": "lstheart/codespace:latest",
   // life scripts
-  "initializeCommand": "sudo chmod -R 755 .devcontainer/scripts/",
+  // "initializeCommand": "sudo chmod -R 755 .devcontainer/scripts/",
   "onCreateCommand": ".devcontainer/scripts/onCreate.sh",
   "updateContentCommand": ".devcontainer/scripts/updateContent.sh",
   "postCreateCommand": ".devcontainer/scripts/postCreate.sh",
@@ -16,7 +16,17 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   "customizations": {
+    "codespaces": {
+      "repositories": {
+        "LstHeart/dotfiles": {
+          "permissions": {
+            "contents": "write"
+          }
+        }
+      }
+    },
     "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
         "dbaeumer.vscode-eslint"
       ],
@@ -25,15 +35,6 @@
         "extensions.ignoreRecommendations": true,
         "gitlens.showWelcomeOnInstall": false,
         "gitlens.showWhatsNewAfterUpgrades": false
-      }
-    },
-    "codespaces":{
-      "repositories": {
-        "LstHeart/chezmoi-dotfiles":{
-          "permissions": {
-            "contents ": "write"
-          }
-        }
       }
     }
   }

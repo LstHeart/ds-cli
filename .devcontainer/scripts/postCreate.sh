@@ -4,11 +4,13 @@
 echo `date +"[%Y/%m/%d %H:%M:%S]"` 'postCreateCommand will begin✨' \
   && echo '[working-dir]:' `pwd`
 
-# 重构时要保留的数据
-# ln -sf $PWD/.devcontainer/config/.zlua $HOME/.zlua && set +x
-# ln -sf $PWD/.devcontainer/config/fish_history $HOME/.local/share/fish/fish_history && set +x
-# ln -sf $PWD/.devcontainer/config/.bash_history $HOME/.bash_history && set +x
-# ln -sf $PWD/.devcontainer/config/.nirc $HOME/.nirc && set +x
+# update softs
+sudo apt update && export DEBIAN_FRONTEND=noninteractive && sudo apt upgrade -y \
+    && brew update && brew upgrade \
+    && chezmoi update
+
+# clean unused
+sudo apt autoremove -y && sudo apt clean
 
 echo `date +"[%Y/%m/%d %H:%M:%S]"` 'postCreateCommand has done🎉'
 exit
